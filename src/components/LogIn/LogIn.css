@@ -1,0 +1,46 @@
+.Log-In form {
+    margin-top: 20px;
+    padding: 0px 20px;
+    margin-bottom: 100px;
+  }
+  
+  .Log-In input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+  }
+  
+  .Log-In input::placeholder {
+    font-size: 15px;
+  }
+  
+  .Log-In button {
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #4169e1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
+  }
+  
+  .Log-In {
+    margin-top: 200px;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media only screen and (min-width: 500px) {
+    .Log-In main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Log-In form {
+      width: 500px;
+    }
+  }

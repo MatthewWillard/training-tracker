@@ -1,0 +1,135 @@
+.main-view {
+    margin-top: 170px;
+    margin-bottom: 120px;
+  }
+  
+  .main-view h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .employee-list ul {
+    list-style: none;
+    padding: 0px;
+    margin: 5px 20px;
+  }
+  
+  .employee-list h4,
+  .trainings {
+    margin-bottom: 0px;
+  }
+  
+  .employee-list h3 {
+    color: #4169e1;
+  }
+  
+  .employee-list p {
+    margin-top: 5px;
+  }
+  
+  .employee-list button {
+    text-decoration: none;
+    background-color: #4169e1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .update-submit {
+    margin-top: 20px;
+  }
+  
+  .employee-list .cancel {
+    background-color: salmon;
+  }
+  
+  .employee-list li {
+    box-shadow: 3px 3px 8px 3px rgba(179, 179, 179, 1);
+    border-radius: 10px;
+    padding: 3px 8px;
+    margin-bottom: 30px;
+  }
+  
+  .employee-list button:hover {
+    color: black;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .show textarea {
+    width: 90%;
+    padding: 8px 12px;
+    margin: 8px 5px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+  }
+  
+  .radio input {
+    margin-left: 10px;
+  }
+  
+  .Full-Time {
+    background-color: lightcoral;
+  }
+  
+  .Temp {
+    background-color: lightblue;
+  }
+  
+  .Part-Time {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  .alert button {
+    background-color: white;
+    color: black;
+    box-shadow: none;
+  }
+  
+  .main-view .sprout-border {
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media only screen and (min-width: 500px) {
+    .employee-list ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .employee-list li {
+      width: 300px;
+      margin-left: 10px;
+      margin-right: 10px;
+      min-height: 250px;
+    }
+  }
+  
+  @media only screen and (min-width: 1350px) {
+    .main-view {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .employee-list-container {
+      display: flex;
+      justify-content: center;
+    }
+    .main-view main {
+      width: 1350px;
+    }
+  }

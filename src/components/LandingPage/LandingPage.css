@@ -1,0 +1,125 @@
+.main {
+    margin-top: 110px;
+    margin-bottom: 100px;
+  }
+  
+  .about-section {
+    padding: 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 40px;
+  }
+  
+  .info-section {
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+  }
+  
+  .demo-section {
+    padding: 20px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .demo-section-card li {
+    border: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .demo-section-card ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  .demo-section-card {
+    padding-bottom: 15px;
+    height: 300px;
+    width: 80%;
+  }
+  
+  .sign-up-section {
+    padding: 20px;
+  }
+  
+  .sign-up-button {
+    text-decoration: none;
+    background-color: #4169e1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
+  }
+  
+  .sign-up-button:hover {
+    color: black;
+  }
+  
+  h3 {
+    font-size: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    box-shadow: 8px 8px 10px 0px rgba(179, 179, 179, 1);
+    border-radius: 10px;
+    padding:3px 8px;
+    margin-bottom: 30px;
+  }
+  
+  .icon {
+    margin-top: 25px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .sprout-border {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  
+  /* MEDIA QUERIES  */
+  
+  @media only screen and (min-width: 500px) {
+    
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  
+    .card {
+      width: 600px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    
+  
+  }
+  
+  @media only screen and (min-width: 1350px) {
+    /* restrict main view size and center flex */
+    .Landing-Page main {
+      width: 1350px;
+    }
+  
+    .Landing-Page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Landing-Page .intro-paragraph {
+      max-width: 600px;
+    }
+  
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }

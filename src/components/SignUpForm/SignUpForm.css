@@ -1,0 +1,44 @@
+.sign-up-section input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+  }
+  
+  .sign-up-section input::placeholder {
+    font-size: 15px;
+  }
+  
+  .sign-up-section button {
+    font-size: 20px;
+  }
+  
+  .sign-up-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .sign-up-link:hover {
+    color: black;
+  }
+  
+  .error {
+    font-size: 13px;
+    color: salmon;
+  }
+  
+  .sign-up-section span {
+    font-size: 13px;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media only screen and (min-width: 500px) {
+    .sign-up-form-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+  }

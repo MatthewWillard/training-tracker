@@ -1,0 +1,63 @@
+.Add-employee {
+    margin-top: 170px;
+    margin-bottom: 100px;
+  }
+  
+  .Add-employee ul {
+    list-style: none;
+  }
+  
+  .Add-employee button {
+    background-color: #4169e1;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .Add-employee button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .Add-employee .delete-button {
+    background-color: white;
+    color: salmon;
+    margin-left: 15px;
+    font-size: 15px;
+    padding: 3px 3px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(179, 179, 179, 1);
+  }
+  
+  .Add-employee .delete-button:hover {
+    background-color: salmon;
+  }
+  
+  .Add-employee input {
+    width: 180px;
+    padding: 6px 10px;
+    margin-left: 8px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+  }
+  
+  .Add-employee .sprout-border {
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .Add-employee li {
+    text-align: left;
+    font-size: 25px;
+  }
+  
+  .add-employee-list {
+    display: flex;
+    justify-content: center;
+  }

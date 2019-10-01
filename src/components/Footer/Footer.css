@@ -1,0 +1,41 @@
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    background-repeat: repeat-x;
+    background-size: auto 50px;
+    padding-top: 50px;
+  }
+  
+  .Footer div {
+    border-top: 1px solid rgb(230, 230, 230);
+  }
+  
+  .Footer a {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: black;
+  }
+  
+  .Footer a:hover {
+    color: #4169e1;
+  }
+  
+  .Footer ul {
+    padding-left: 0;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+  
+  .Footer p{
+    font-size: 11px;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
