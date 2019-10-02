@@ -41,3 +41,13 @@
     }
     
   }
+
+  @media only screen and (max-width: 720px) {
+    .link-container a {
+      font-size: 10px;
+    }
+    H1 {
+      font-size: 35px;
+    }
+    
+  }

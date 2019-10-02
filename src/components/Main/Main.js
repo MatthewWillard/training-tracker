@@ -46,6 +46,7 @@ class Main extends React.Component {
           <h2>{employee.name}</h2>
           <p className="trainings">Current Training Level: {employee.trainings}</p>
           <p className="trainings">Next Training: {employee.trainings2}</p>
+          <p className="trainings">Next Training2: {employee.trainings3}</p>
           <button
             className={employee.expand ? "cancel" : "checkin"}
             onClick={e => this.context.toggleExpand(employee.id)}
@@ -78,7 +79,18 @@ class Main extends React.Component {
                   required
                 />
               </div>
-              
+              <div>
+                <label htmlFor="new-trainings">Next Training2</label>
+                <textarea
+                  placeholder="Update Next Training2"
+                  name="new-trainings"
+                  id="new-trainings"
+                  type="text"
+                  value={this.context.minitrainings3}
+                  onChange={e => this.context.updateMinitrainings3(e.target.value)}
+                  required
+                />
+              </div>
               <button type="submit" className="update-submit">
                 Update
               </button>

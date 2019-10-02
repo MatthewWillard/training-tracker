@@ -4,16 +4,16 @@
   }
   
   .Add-employee ul {
-    list-style: none;
+    border: 2px solid black;
+    box-shadow: 10px 4px 5px 0px rgba(179, 179, 179, 1);
   }
   
   .Add-employee button {
     background-color: #4169e1;
     color: white;
     padding: 3px 10px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 20px;
     margin-top: 10px;
   }
   
@@ -26,6 +26,8 @@
     background-color: white;
     color: red;
     margin-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 10px;
     font-size: 15px;
     padding: 3px 3px;
     border-radius: 3px;
@@ -37,20 +39,14 @@
   }
   
   .Add-employee input {
-    width: 180px;
+    width: 150px;
     padding: 6px 10px;
     margin-left: 8px;
     box-sizing: border-box;
-    border: 2px solid lightgray;
+    border: 2px solid gray;
     border-radius: 4px;
   }
   
-  .Add-employee .border {
-    margin-bottom: 0px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
   
   .Add-employee li {
     text-align: left;

@@ -23,6 +23,7 @@ class App extends Component {
     user_id: "",
     minitrainings: "",
     minitrainings2: "",
+    minitrainings3: "",
     level: "Temp",
     newemployeeName: "",
     loggedIn: false
@@ -113,6 +114,12 @@ class App extends Component {
     });
   };
 
+  updateMinitrainings3 = trainings => {
+    this.setState({
+      minitrainings3: trainings
+    });
+  };
+
   updateLevel = level => {
     const updateLevel = level === "" ? "Temp" : level;
     this.setState({
@@ -135,7 +142,7 @@ class App extends Component {
   handleUpdatetrainings = (e, employeeId) => {
     e.preventDefault();
     this.clearError();
-    const data = { trainings: this.state.minitrainings, level: this.state.level, trainings2: this.state.minitrainings2 };
+    const data = { trainings: this.state.minitrainings, level: this.state.level, trainings2: this.state.minitrainings2, trainings3: this.state.minitrainings3 };
     employeesApiService.updateemployee(employeeId, data)
       .then(res => {
         const employeeToUpdate = this.state.employees.find(
@@ -154,6 +161,7 @@ class App extends Component {
           ),
           minitrainings: "",
           minitrainings2: "",
+          minitrainings3: "",
           level: "Temp"
         });
       })
@@ -302,6 +310,7 @@ class App extends Component {
             user_id: this.state.user_id,
             minitrainings: this.state.minitrainings,
             minitrainings2: this.state.minitrainings2,
+            minitrainings3: this.state.minitrainings3,
             level: this.state.level,
             loggedIn: this.state.loggedIn,
             newemployeeName: this.state.newemployeeName,
@@ -311,6 +320,7 @@ class App extends Component {
             toggleExpand: this.toggleExpand,
             updateMinitrainings: this.updateMinitrainings,
             updateMinitrainings2: this.updateMinitrainings2,
+            updateMinitrainings3: this.updateMinitrainings3,
             updateLevel: this.updateLevel,
             handleUpdatetrainings: this.handleUpdatetrainings,
             updateNewemployeeName: this.updateNewemployeeName,

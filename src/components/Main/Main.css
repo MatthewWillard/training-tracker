@@ -24,7 +24,7 @@
   }
   
   .employee-list p {
-    margin-top: 5px;
+    margin-top: 20px;
   }
   
   .employee-list button {
@@ -32,8 +32,7 @@
     background-color: #4169e1;
     color: white;
     padding: 5px 10px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
+    border-radius: 8px;
     font-size: 20px;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -44,14 +43,14 @@
   }
   
   .employee-list .cancel {
-    background-color: salmon;
+    background-color: red;
   }
   
   .employee-list li {
-    box-shadow: 3px 3px 8px 3px rgba(179, 179, 179, 1);
-    border-radius: 10px;
+    box-shadow: 3px 3px 8px 3px black;
     padding: 3px 8px;
     margin-bottom: 30px;
+    border: 2px solid black;
   }
   
   .employee-list button:hover {
@@ -64,16 +63,10 @@
   
   .show textarea {
     width: 90%;
-    padding: 8px 12px;
-    margin: 8px 5px;
+    padding: 10px 14px;
+    margin: 10px 7px;
     margin-left: 10px;
     box-sizing: border-box;
-    border: 2px solid lightgray;
-    border-radius: 4px;
-  }
-  
-  .radio input {
-    margin-left: 10px;
   }
   
   .alert button {

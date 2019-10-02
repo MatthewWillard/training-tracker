@@ -16,6 +16,7 @@ const Context = React.createContext({
   toggleExpand: () => {},
   updateMinitrainings: () => {},
   updateMinitrainings2: () => {},
+  updateMinitrainings3: () => {},
   updateLevel: () => {},
   handleUpdatetrainings: () => {},
   updateNewemployeeName: () => {},

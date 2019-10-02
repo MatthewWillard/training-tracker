@@ -30,6 +30,30 @@
   .Log-In {
     margin-top: 200px;
   }
+
+  .demo-section {
+    padding: 20px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .demo-section-card li {
+    border: none;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  .demo-section-card ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  .demo-section-card {
+    padding-bottom: 15px;
+    height: 170px;
+    width: 25%;
+  }
     
   @media only screen and (min-width: 500px) {
     .Log-In main {
@@ -41,4 +65,20 @@
     .Log-In form {
       width: 500px;
     }
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .demo-section-card {
+      padding-bottom: 15px;
+      height: 170px;
+      width: 75%;
+  }
+  }
+
+  @media only screen and (min-width: 720px) {
+    .demo-section-card {
+      padding-bottom: 15px;
+      height: 170px;
+      width: 50%;
+  }
   }
