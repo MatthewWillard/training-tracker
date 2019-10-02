@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import LandingPage from "./components/LandingPage/LandingPage";
 import LogIn from "./components/LogIn/LogIn";
+import SignUpForm from "./components/SignUpForm/SignUpForm";
 import Main from "./components/Main/Main";
 import Addemployee from "./components/AddEmployee/AddEmployee";
 import NotFound from "./components/NotFound/NotFound";
@@ -27,7 +28,6 @@ class App extends Component {
     loggedIn: false
   };
 
-  // Error handling
   setError = error => {
     console.error('THE ERROR IS', error);
     this.setState({
@@ -43,7 +43,6 @@ class App extends Component {
     });
   };
 
-  // Adding UI data to employees from database
   setemployees = employees => {
     const addKeysemployees = employees.map(employee => {
       employee.expand = false;
@@ -64,7 +63,6 @@ class App extends Component {
     });
   };
 
-  // Auth/Idle
   componentDidMount() {
     IdleService.setIdleCallback(this.logoutFromIdle);
 
@@ -91,7 +89,6 @@ class App extends Component {
     });
   };
 
-  // all 'update' prefixes set state
   updateUsername = username => {
     this.setState({
       username
@@ -135,7 +132,6 @@ class App extends Component {
     });
   };
 
-  // Updates mini-trainings and level for employee having check-in (Main view)
   handleUpdatetrainings = (e, employeeId) => {
     e.preventDefault();
     this.clearError();
@@ -170,22 +166,17 @@ class App extends Component {
       });
   };
 
-  // Sets timer for specified level (Main view)
-  // High - 5 min/300000, Medium - 10min/600000, Low - 20 min/1200000 
   handleTimer = (employeeId, level) => {
     const time =
       level === "Full-Time" ? 300000 : level === "Part-Time" ? 600000 : 1200000;
     setTimeout(this.handleAlert, time, employeeId);
   };
 
-  // Callback fn for level timers, enables alert status and reorders (Main view)
   handleAlert = employeeId => {
     const alertemployee = this.state.employees.find(
       employee => employee.id === employeeId
     );
-    // toggle alert
     const employeeOrder = { ...alertemployee, alert: true, order: new Date() };
-    // re-order
     this.setState({
       employees: this.state.employees.map(employee =>
         employee.id !== employeeId ? employee : employeeOrder
@@ -193,7 +184,6 @@ class App extends Component {
     });
   };
 
-  //Updates employee and adds them to employee list (Add employee view)
   handleAddemployeeSubmit = e => {
     e.preventDefault();
     this.clearError();
@@ -212,7 +202,6 @@ class App extends Component {
       });
   };
 
-  //Deletes employee from list (Add employee view)
   handleDeleteemployee = deleteemployee => {
     this.clearError();
     const employeeId = deleteemployee.id;
@@ -231,7 +220,6 @@ class App extends Component {
       });
   };
 
-  // Handles sign up, and validation -> will redirect upon valid sign in (see SignUpForm)
   handleSignUpSubmit = e => {
     e.preventDefault();
     const { username, password, email, confirm_password } = e.target;
@@ -241,7 +229,6 @@ class App extends Component {
       error: null
     });
 
-    //VALIDATE THAT PASSWORD MATCHES
     if (password.value !== confirm_password.value) {
       this.setState({
         hasError: true,
@@ -284,7 +271,6 @@ class App extends Component {
   };
 
 
-  // Expands employee checkin and updates alert and order conditions (Main view)
   toggleExpand = employeeId => {
     const employeeToExpand = this.state.employees.find(
       employee => employee.id === employeeId
@@ -346,6 +332,7 @@ class App extends Component {
                 <Route path="/login" component={LogIn} />
                 <Route path="/main" component={Main} />
                 <Route path="/add" component={Addemployee} />
+                <Route path="/signup" component={SignUpForm} />
                 <Route component={NotFound} />
             </Switch>
             <Footer />

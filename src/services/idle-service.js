@@ -9,7 +9,6 @@ let notIdleEvents = [
 ];
 let fiveMinutesInMs = 5 * 60 * 1000;
 
-// Will stop refreshing auth token if idle
 const IdleService = {
   setIdleCallback(idleCb) {
     idleCallback = idleCb;

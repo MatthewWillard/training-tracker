@@ -24,7 +24,7 @@
   
   .Add-employee .delete-button {
     background-color: white;
-    color: salmon;
+    color: red;
     margin-left: 15px;
     font-size: 15px;
     padding: 3px 3px;
@@ -33,7 +33,7 @@
   }
   
   .Add-employee .delete-button:hover {
-    background-color: salmon;
+    background-color: red;
   }
   
   .Add-employee input {
@@ -45,7 +45,7 @@
     border-radius: 4px;
   }
   
-  .Add-employee .sprout-border {
+  .Add-employee .border {
     margin-bottom: 0px;
     position: absolute;
     bottom: 0;

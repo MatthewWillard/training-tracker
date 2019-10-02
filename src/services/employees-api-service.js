@@ -2,7 +2,6 @@ import config from "../config";
 import TokenService from "./token-service";
 
 const employeesApiService = {
-  // For populating employee data from database
   getemployees() {
     return fetch(`${config.API_ENDPOINT}/employees`, {
       method: "GET",
@@ -13,7 +12,6 @@ const employeesApiService = {
       return !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
     });
   },
-  // For adding new employee to database
   postemployee(name, user_id) {
     return fetch(`${config.API_ENDPOINT}/employees`, {
       method: "POST",
@@ -29,7 +27,6 @@ const employeesApiService = {
       return !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
     });
   },
-  // For deleting employee from database
   deleteemployee(id) {
     return fetch(`${config.API_ENDPOINT}/employees/${id}`, {
       method: "DELETE",
@@ -45,7 +42,6 @@ const employeesApiService = {
       }
     });
   },
-  // For updating employee data in database
   updateemployee(id, data) {
     return fetch(`${config.API_ENDPOINT}/employees/${id}`, {
       method: "PATCH",

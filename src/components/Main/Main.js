@@ -9,7 +9,6 @@ import TokenService from "../../services/token-service";
 class Main extends React.Component {
   static contextType = Context;
 
-  // When component loads, gets employees from server
   componentDidMount() {
     this.context.clearError();
     if(TokenService.hasAuthToken()) {
@@ -23,9 +22,6 @@ class Main extends React.Component {
   }
 
   render() {
-    // employees are sorted and listed so that employees requiring checkins move to top of list
-    // employee that has first expired timer stays at the top of the list
-    // employees that do not have expired timers stay beneath all employees with expired timers
     const employeesFromContext = this.context.employees || [];
     const employeesToSort = employeesFromContext.filter(
       employee => employee.order !== 0
@@ -47,10 +43,9 @@ class Main extends React.Component {
           key={index}
           className={employee.alert === true ? `alert ${employee.level}` : ""}
         >
-          <h4>{employee.name}</h4>
-          <p className="trainings">Training Status: {employee.trainings}</p>
-          <p className="trainings">Training Status: {employee.trainings2}</p>
-          <p>Employement Level: {employee.level}</p>
+          <h2>{employee.name}</h2>
+          <p className="trainings">Current Training Level: {employee.trainings}</p>
+          <p className="trainings">Next Training: {employee.trainings2}</p>
           <button
             className={employee.expand ? "cancel" : "checkin"}
             onClick={e => this.context.toggleExpand(employee.id)}
@@ -60,9 +55,9 @@ class Main extends React.Component {
           <div className={employee.expand === false ? "hidden" : "show"}>
             <form onSubmit={e => this.context.handleUpdatetrainings(e, employee.id)}>
               <div>
-                <label htmlFor="new-trainings">New trainings:</label>
+                <label htmlFor="new-trainings">Current Training Level</label>
                 <textarea
-                  placeholder="Update Training Status"
+                  placeholder="Update Training Level"
                   name="new-trainings"
                   id="new-trainings"
                   type="text"
@@ -72,9 +67,9 @@ class Main extends React.Component {
                 />
               </div>
               <div>
-                <label htmlFor="new-trainings">New trainings2:</label>
+                <label htmlFor="new-trainings">Next Training</label>
                 <textarea
-                  placeholder="Update Training Status2"
+                  placeholder="Update Next Training"
                   name="new-trainings"
                   id="new-trainings"
                   type="text"
@@ -83,32 +78,7 @@ class Main extends React.Component {
                   required
                 />
               </div>
-              <div className="radio">
-                <input
-                  type="radio"
-                  value="0"
-                  id="Full-Time"
-                  name="level"
-                  onChange={e => this.context.updateLevel("Full-Time")}
-                />
-                <label htmlFor="Full-Time">Full-Time</label>
-                <input
-                  type="radio"
-                  value="1"
-                  id="Part-Time"
-                  name="level"
-                  onChange={e => this.context.updateLevel("Part-Time")}
-                />
-                <label htmlFor="Part-Time">Part-Time</label>
-                <input
-                  type="radio"
-                  value="3"
-                  id="Temp"
-                  name="level"
-                  onChange={e => this.context.updateLevel("Temp")}
-                />
-                <label htmlFor="Temp">Temp</label>
-              </div>
+              
               <button type="submit" className="update-submit">
                 Update
               </button>
@@ -121,12 +91,8 @@ class Main extends React.Component {
       <div className="main-view">
         <Nav />
         <main>
-          <header>
-            <h2>Welcome back{(this.context.username) ? `, ${this.context.username}` : ''}!</h2>
-          </header>
-          {/* {this.context.error && <p className="error">{this.context.error}</p>} */}
           <section className="employee-list">
-            <h3>Employees</h3>
+            <h3>Employee List</h3>
             <div className="employee-list-container">
               <ul>{employees}</ul>
             </div>

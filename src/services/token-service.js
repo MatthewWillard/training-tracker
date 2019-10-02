@@ -4,7 +4,6 @@ import config from "../config";
 let timeoutId;
 const tenSecondsInMs = 10000;
 
-// Working with auth token and setting up expiry instructions
 const TokenService = {
   saveAuthToken(token) {
     window.localStorage.setItem(config.TOKEN_KEY, token);

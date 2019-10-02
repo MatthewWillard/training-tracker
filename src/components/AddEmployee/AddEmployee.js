@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Nav/Nav";
-//import "./AddEmployee.css";
+import "./AddEmployee.css";
 import Context from "../../context/Context";
 import employeesApiService from "../../services/employees-api-service";
 import TokenService from "../../services/token-service";
@@ -8,7 +8,6 @@ import TokenService from "../../services/token-service";
 class AddEmployee extends React.Component {
   static contextType = Context;
 
-  //Gets employees from server
   componentDidMount() {
     this.context.clearError();
     if (TokenService.hasAuthToken()) {
@@ -21,7 +20,6 @@ class AddEmployee extends React.Component {
   }
 
   render() {
-    //Creates employee list with delete button
     const employees = this.context.employees ? this.context.employees.map((employee, index) => {
       return (
         <li key={index}>

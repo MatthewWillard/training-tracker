@@ -30,9 +30,7 @@
   .Log-In {
     margin-top: 200px;
   }
-  
-  /* MEDIA QUERIES */
-  
+    
   @media only screen and (min-width: 500px) {
     .Log-In main {
       display: flex;

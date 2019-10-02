@@ -10,7 +10,7 @@
   
   .employee-list ul {
     list-style: none;
-    padding: 0px;
+    padding: 10px;
     margin: 5px 20px;
   }
   
@@ -35,11 +35,12 @@
     border-radius: 10px;
     box-shadow: 4px 4px 10px 0px rgba(179, 179, 179, 1);
     font-size: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
   }
   
   .update-submit {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .employee-list .cancel {
@@ -75,32 +76,18 @@
     margin-left: 10px;
   }
   
-  .Full-Time {
-    background-color: lightcoral;
-  }
-  
-  .Temp {
-    background-color: lightblue;
-  }
-  
-  .Part-Time {
-    background-color: lightgoldenrodyellow;
-  }
-  
   .alert button {
     background-color: white;
     color: black;
     box-shadow: none;
   }
   
-  .main-view .sprout-border {
+  .main-view .border {
     margin-bottom: 0px;
     position: absolute;
     bottom: 0;
   }
-  
-  /* MEDIA QUERIES */
-  
+    
   @media only screen and (min-width: 500px) {
     .employee-list ul {
       display: flex;

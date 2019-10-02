@@ -3,7 +3,7 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 import IdleService from "../../services/idle-service";
 import Context from "../../context/Context";
 import TokenService from "../../services/token-service";
-//import "./Nav.css";
+import "./Nav.css";
 
 class Nav extends React.Component {
   static contextType = Context;
@@ -16,7 +16,6 @@ class Nav extends React.Component {
     this.context.setemployees([]);
   };
 
-  // Displayed while user is logged in
   renderLogoutLink() {
     return (
       <div className="loggedin link-container">
@@ -31,14 +30,13 @@ class Nav extends React.Component {
     );
   }
 
-  // Displayed while user is logged out
   renderLoginLink() {
     return (
       <div className="loggedout link-container">
-        <NavLink smooth to="/#about">
+        <NavLink smooth to="/">
           Home
         </NavLink>
-        <NavLink smooth to="/#sign-up">
+        <NavLink smooth to="/signup">
           Sign Up
         </NavLink>
         <NavLink to="/login">Log In</NavLink>

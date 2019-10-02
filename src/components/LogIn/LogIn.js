@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import AuthApiService from "../../services/auth-api-service";
 import Context from "../../context/Context";
-//import "./LogIn.css";
+import "./LogIn.css";
 
 class LogIn extends React.Component {
   static contextType = Context;
@@ -42,6 +42,15 @@ class LogIn extends React.Component {
     return (
       <div className="Log-In">
         <Nav />
+        <section className="demo-section">
+            <div className="card demo-section-card">
+              <h3>Demo Account</h3>
+              <ul>
+                <li>Username: Demo</li>
+                <li>Password: Password0!</li>
+              </ul>
+            </div>
+          </section>
         <main>
           <header>
             <h2>Log In</h2>

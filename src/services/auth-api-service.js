@@ -3,7 +3,6 @@ import TokenService from "./token-service";
 import IdleService from "./idle-service";
 
 const AuthApiService = {
-  // For adding new user to database
   postUser(user) {
     return fetch(`${config.API_ENDPOINT}/users`, {
       method: "POST",
@@ -15,7 +14,6 @@ const AuthApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-  // For checking user login info against database
   postLogin({ username, password }) {
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
       method: "POST",
@@ -37,7 +35,6 @@ const AuthApiService = {
         return res;
       });
   },
-  // For refreshing authorization to access server
   postRefreshToken() {
     return fetch(`${config.API_ENDPOINT}/auth/refresh`, {
       method: "POST",

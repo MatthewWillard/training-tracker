@@ -1,6 +1,7 @@
 import React from "react";
 import Context from "../../context/Context";
-//import "./SignUpForm.css";
+import "./SignUpForm.css";
+import Nav from '../Nav/Nav';
 
 class SignUpForm extends React.Component {
   static contextType = Context;
@@ -13,6 +14,9 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
+      <section className="sign-up-section" id="sign-up">
+      <Nav />
+      <h3>Sign Up</h3>
       <div className="sign-up-form-container">
         <form
           id="sign-up-form"
@@ -21,7 +25,7 @@ class SignUpForm extends React.Component {
               .handleSignUpSubmit(e)
               .then(this.handleRedirect)
               .catch(() => {})
-          } //.then(this.handleRedirect)
+             }
         >
           <div>
             <div className={this.context.hasError ? "error" : "hidden"}>
@@ -73,6 +77,7 @@ class SignUpForm extends React.Component {
           </button>
         </form>
       </div>
+      </section>
     );
   }
 }
