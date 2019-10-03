@@ -14,7 +14,7 @@ class LandingPage extends React.Component {
           <section className="info-section">
             <header role="banner">
               <h3>
-                Training Tracker helps managers keep track of whose been trained on what and what they need to be trained on next.
+                The Training Tracker helps managers keep track of whose been trained on what and what they need to be trained on next.
               </h3>
             </header>
             <div className="card-container">

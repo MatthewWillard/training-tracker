@@ -44,9 +44,9 @@ class Main extends React.Component {
           className={employee.alert === true ? `alert ${employee.level}` : ""}
         >
           <h2>{employee.name}</h2>
-          <p className="trainings">Current Training Level: {employee.trainings}</p>
-          <p className="trainings">Next Training: {employee.trainings2}</p>
-          <p className="trainings">Next Training2: {employee.trainings3}</p>
+          <p className="trainings">Completed Training: {employee.trainings}</p>
+          <p className="trainings">Current Training: {employee.trainings2}</p>
+          <p className="trainings">Next Training: {employee.trainings3}</p>
           <button
             className={employee.expand ? "cancel" : "checkin"}
             onClick={e => this.context.toggleExpand(employee.id)}
@@ -56,9 +56,9 @@ class Main extends React.Component {
           <div className={employee.expand === false ? "hidden" : "show"}>
             <form onSubmit={e => this.context.handleUpdatetrainings(e, employee.id)}>
               <div>
-                <label htmlFor="new-trainings">Current Training Level</label>
+                <label htmlFor="new-trainings">Completed Training</label>
                 <textarea
-                  placeholder="Update Training Level"
+                  placeholder="Update Completed Training Level"
                   name="new-trainings"
                   id="new-trainings"
                   type="text"
@@ -68,9 +68,9 @@ class Main extends React.Component {
                 />
               </div>
               <div>
-                <label htmlFor="new-trainings">Next Training</label>
+                <label htmlFor="new-trainings">Current Training</label>
                 <textarea
-                  placeholder="Update Next Training"
+                  placeholder="Update Current Training"
                   name="new-trainings"
                   id="new-trainings"
                   type="text"
@@ -80,9 +80,9 @@ class Main extends React.Component {
                 />
               </div>
               <div>
-                <label htmlFor="new-trainings">Next Training2</label>
+                <label htmlFor="new-trainings">Next Training</label>
                 <textarea
-                  placeholder="Update Next Training2"
+                  placeholder="Update Next Training"
                   name="new-trainings"
                   id="new-trainings"
                   type="text"
