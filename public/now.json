@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "training-tracker",
-    "alias": "training-tracker.mwillard.now.sh",
+    "alias": "trainingtracker.mwillard.now.sh",
     "routes": [
         {
           "src": "^/static/(.*)",

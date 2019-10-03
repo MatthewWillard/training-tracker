@@ -47,8 +47,10 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="Nav">
-        <div className="logo-container">
-          <h1>Training Tracker</h1>
+        <div className="title-container">
+        <NavLink smooth to="/">
+          Training Tracker
+        </NavLink>
         </div>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

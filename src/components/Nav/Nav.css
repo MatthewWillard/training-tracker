@@ -13,6 +13,20 @@
     margin-bottom: 10px;
     color: white;
   }
+
+  .title-container a {
+    text-decoration: none;
+    font-size: 55px;
+    color: white;
+  }
+
+  .title-container {
+    padding-bottom: 8px;
+  }
+  
+  .title-container a:hover {
+    color: white;
+  }
   
   .link-container {
     justify-content: space-evenly;
@@ -36,7 +50,7 @@
   
 
   @media only screen and (max-width: 320px) {
-    H1 {
+    .title-container a {
       font-size: 40px;
     }
     
@@ -46,8 +60,8 @@
     .link-container a {
       font-size: 10px;
     }
-    H1 {
-      font-size: 35px;
+    .title-container a {
+      font-size: 40px;
     }
     
   }
